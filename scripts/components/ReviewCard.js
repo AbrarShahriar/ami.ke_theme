@@ -6,7 +6,7 @@ export default function ReviewCard({
   userProfession,
 }) {
   return `
-    <div class="reviews_container">
+    <div data-aos="fade-left" class="reviews_container">
         <div class="review_text_container">
             <p>
                 ${reviewBody}

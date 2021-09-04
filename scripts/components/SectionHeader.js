@@ -1,6 +1,6 @@
-export default function SectionHeader({ tag, title, desc }) {
+export default function SectionHeader({ tag, title, desc, aos = "fade-up" }) {
   return `
-        <div class="section_header">
+        <div data-aos="${aos}" class="section_header">
             <p class="tag">${tag}</p>
             <h1>${title}</h1>
             <p class="section_info">

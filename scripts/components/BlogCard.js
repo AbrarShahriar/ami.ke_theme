@@ -1,6 +1,6 @@
 export default function BlogCard({ imgSrc, poster, date, comments, title }) {
   return `
-        <div class="blog_card">
+        <div data-aos="fade-up" class="blog_card">
             <img
                 src="${imgSrc}"
                 alt=""

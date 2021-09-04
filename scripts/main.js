@@ -213,6 +213,7 @@ reviewsContainer.insertAdjacentHTML(
     title: "Happy Clients Says",
     desc: "Phasellus accumsan scelerisque dolor, quis mattis justo  varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae <br><br> enim elementum varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
     btnName: "Learn More",
+    aos: "fade-right",
   })
 );
 

@@ -6,13 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ami Ke</title>
     <link rel="stylesheet" href="styles/main.css" />
-    <link href="https://css.gg/css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
-      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <script src="https://use.fontawesome.com/0c543e37a3.js"></script>
 
@@ -96,8 +90,8 @@
     <div class="services">
       <!-- header here -->
       <div class="services_body">
-        <div class="container">
-          <div class="services_cards"></div>
+        <div  class="container">
+          <div data-aos="fade-right" class="services_cards"></div>
         </div>
       </div>
     </div>
@@ -112,8 +106,9 @@
             title="me-01"
             alt="me-01"
             class="me-01"
+            data-aos="fade-right"
           />
-          <div class="about_info_body">
+          <div class="about_info_body" data-aos="fade-left">
             <div class="about_info_title">
               <h1>Hi There</h1>
               <p>
@@ -164,7 +159,7 @@
     </div>
 
     <!-- --------- PORTFOLIO ---------- -->
-    <div class="portfolio">
+    <div data-aos="fade-up" class="portfolio">
       <!-- header here -->
       <div class="portfolio_header_options">
         <span data-filter=".all_works" class="option option_active"
@@ -175,7 +170,7 @@
         <span data-filter=".design" class="option">Design</span>
         <span data-filter=".web" class="option">Web</span>
       </div>
-      <div class="portfolio_body">
+      <div data-aos="slide-up" class="portfolio_body">
         <div class="grid">
           <div class="grid-sizer"></div>
         </div>
@@ -247,7 +242,7 @@
       <!-- header here -->
       <div class="basic_contact_info">
 
-        <div class="info_card">
+        <div data-aos="fade-right" class="info_card">
           <div class="icon">
             <i class="fa-fw fa fa-map-marker"></i>
           </div>
@@ -257,7 +252,7 @@
           </div>
         </div>
         
-        <div class="info_card">
+        <div data-aos="fade-up" class="info_card">
           <div class="icon">
             <i class="fa-fw fa fa-phone"></i>
           </div>
@@ -267,7 +262,7 @@
           </div>
         </div>
 
-        <div class="info_card">
+        <div data-aos="fade-left" class="info_card">
           <div class="icon">
             <i class="fa-fw fa fa-envelope-o"></i>
           </div>
@@ -279,7 +274,7 @@
 
       </div>
 
-      <div class="contact_form">
+      <div data-aos="slide-up" class="contact_form">
         <div class="name_email">
           <input type="text" placeholder="Your Name">
           <input type="text" placeholder="Your Email">
@@ -310,9 +305,16 @@
           </div>
         </div>
       </div>
-      <p>Copyright © 2020 <a href="/">Ami.Ke </a> All Rights Reserved by ThemeBing. </p>
+      <p>Copyright © 2021 <a href="/">Ami.Ke </a> All Rights Reserved by ThemeBing. </p>
     </footer>
 
     <script type="module" src="scripts/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 1500
+      });
+    </script>
   </body>
 </html>
