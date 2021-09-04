@@ -40,6 +40,11 @@ a {
           box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #25283d;
   color: #f8f9fa;
