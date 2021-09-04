@@ -45,12 +45,7 @@ body {
   color: #f8f9fa;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  overflow-x: hidden;
   line-height: 26px;
-}
-
-body * {
-  outline: 2px solid red;
 }
 
 header {
@@ -191,7 +186,6 @@ header ul li a:hover {
 
 #scrollToTop {
   outline: 2px solid red;
-  display: none;
   position: fixed;
   opacity: 0;
   bottom: 40px;
@@ -360,8 +354,6 @@ header ul li a:hover {
     white-space: normal;
     text-align: center;
     border: none;
-    margin-right: 10px;
-    margin-left: 10px;
   }
   .banner .container .intro .typing::after {
     content: none;
@@ -622,7 +614,6 @@ header ul li a:hover {
 @media (max-width: 800px) {
   .skills .container {
     width: 100%;
-    margin: 0 30px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -635,7 +626,8 @@ header ul li a:hover {
     width: 100%;
   }
   .skills .container .skills_body .skills_container {
-    padding-right: 50px;
+    width: 90%;
+    margin: 0 auto;
   }
   .skills .container .skills_body .skills_container .skill {
     margin-bottom: 30px;
@@ -1129,18 +1121,16 @@ header ul li a:hover {
 @media (max-width: 800px) {
   .reviews .container {
     width: 100%;
-    margin: 0 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   .reviews .container .reviews_body .reviews_container {
-    padding-right: 20px;
+    margin: 0 20px;
   }
   .reviews .container .reviews_body .reviews_container .review_text_container {
     max-width: 100%;
-    margin-right: 20px;
     text-align: center;
   }
   .reviews .container .actions {
@@ -1487,7 +1477,13 @@ footer p a {
 
 @media (max-width: 800px) {
   footer .container {
-    width: 90%;
+    width: 100%;
+  }
+  footer .container .social_links {
+    width: 80%;
+  }
+  footer .container .social_links .social_link {
+    margin-right: 0;
   }
   footer p {
     width: 90%;
@@ -1541,6 +1537,9 @@ footer p a {
   .section_header {
     width: 90%;
   }
+  .section_header h1 {
+    font-size: 3em;
+  }
 }
 
 .section_header_v2 {
@@ -1591,5 +1590,14 @@ footer p a {
 
 .section_header_v2 .btn_hireme:hover {
   background-color: #dc3545;
+}
+
+@media (max-width: 800px) {
+  .section_header_v2 {
+    margin-left: 30px;
+  }
+  .section_header_v2 h1 {
+    font-size: 3em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

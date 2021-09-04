@@ -12,16 +12,15 @@
 }
 
 body {
+  * {
+    // outline: 2px solid red;
+  }
   background-color: $body-color;
   color: $light;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   line-height: 26px;
-
-  * {
-    outline: 2px solid red;
-  }
 }
 
 header {
@@ -151,7 +150,7 @@ header {
 
 #scrollToTop {
   outline: 2px solid red;
-  display: none;
+  // display: none;
   position: fixed;
   opacity: 0;
   bottom: 40px;
@@ -294,8 +293,6 @@ header {
           white-space: normal;
           text-align: center;
           border: none;
-          margin-right: 10px;
-          margin-left: 10px;
 
           &::after {
             content: none;
@@ -479,7 +476,6 @@ header {
 
 .skills {
   background-color: $header-color;
-  // outline: 2px solid red;
   padding-bottom: 100px;
 
   .container {
@@ -487,7 +483,6 @@ header {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    // outline: 2px solid green;
 
     .skills_body {
       flex: 1;
@@ -504,8 +499,6 @@ header {
             display: block;
             position: relative;
             background: RGB(255, 74, 87) !important;
-
-            // outline: 2px solid orange;
 
             .skill_count {
               border: 0.125rem solid rgb(255, 255, 255);
@@ -540,7 +533,6 @@ header {
   .skills {
     .container {
       width: 100%;
-      margin: 0 30px;
       align-items: flex-start;
       flex-direction: column;
 
@@ -548,7 +540,8 @@ header {
         width: 100%;
 
         .skills_container {
-          padding-right: 50px;
+          width: 90%;
+          margin: 0 auto;
 
           .skill {
             margin-bottom: 30px;
@@ -989,15 +982,13 @@ header {
   .reviews {
     .container {
       width: 100%;
-      margin: 0 20px;
       flex-direction: column;
 
       .reviews_body {
         .reviews_container {
-          padding-right: 20px;
+          margin: 0 20px;
           .review_text_container {
             max-width: 100%;
-            margin-right: 20px;
             text-align: center;
           }
         }
@@ -1296,7 +1287,14 @@ footer {
 @media (max-width: 800px) {
   footer {
     .container {
-      width: 90%;
+      width: 100%;
+
+      .social_links {
+        width: 80%;
+        .social_link {
+          margin-right: 0;
+        }
+      }
     }
 
     p {
@@ -1344,6 +1342,10 @@ footer {
 @media (max-width: 800px) {
   .section_header {
     width: 90%;
+
+    h1 {
+      font-size: 3em;
+    }
   }
 }
 
@@ -1353,8 +1355,6 @@ footer {
   padding-top: 100px;
   flex: 1;
   margin-right: 100px;
-
-  // outline: 2px solid white;
 
   .tag {
     color: $red;
@@ -1386,6 +1386,15 @@ footer {
 
     &:hover {
       background-color: $red;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .section_header_v2 {
+    margin-left: 30px;
+
+    h1 {
+      font-size: 3em;
     }
   }
 }
