@@ -763,7 +763,7 @@ header ul li a:hover {
 
 @media (max-width: 800px) {
   .portfolio .portfolio_header_options {
-    width: 80%;
+    width: 90%;
     margin: 50px auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -775,7 +775,7 @@ header ul li a:hover {
             justify-content: center;
   }
   .portfolio .portfolio_header_options .option {
-    margin-right: 20px;
+    margin-right: 10px;
     font-size: 1em;
     margin-bottom: 5px;
   }
@@ -1607,6 +1607,10 @@ footer p a {
   }
   .section_header_v2 h1 {
     font-size: 3em;
+  }
+  .section_header_v2 .section_info_v2 {
+    max-width: 350px;
+    margin-bottom: 40px;
   }
 }
 /*# sourceMappingURL=main.css.map */
