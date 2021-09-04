@@ -172,6 +172,9 @@ header ul li a:hover {
   header .menu__body ul li {
     margin-top: 20px;
   }
+  header .menu__active {
+    background-color: #25283d;
+  }
 }
 
 .header__style__onScroll {
@@ -183,6 +186,7 @@ header ul li a:hover {
 }
 
 #scrollToTop {
+  outline: 2px solid red;
   position: fixed;
   opacity: 0;
   bottom: 40px;

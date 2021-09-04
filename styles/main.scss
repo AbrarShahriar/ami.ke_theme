@@ -131,6 +131,10 @@ header {
         }
       }
     }
+
+    .menu__active {
+      background-color: $body-color;
+    }
   }
 }
 
@@ -142,6 +146,8 @@ header {
 }
 
 #scrollToTop {
+  outline: 2px solid red;
+
   position: fixed;
   opacity: 0;
   bottom: 40px;

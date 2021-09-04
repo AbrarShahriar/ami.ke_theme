@@ -43,8 +43,10 @@ const header = selector("header");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 400) {
     header.classList.add("header__style__onScroll");
+    menu.classList.add("menu__active");
   } else {
     header.classList.remove("header__style__onScroll");
+    menu.classList.remove("menu__active");
   }
 
   //scroll to top button
