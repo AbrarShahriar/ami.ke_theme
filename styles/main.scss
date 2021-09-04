@@ -18,6 +18,10 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   line-height: 26px;
+
+  * {
+    outline: 2px solid red;
+  }
 }
 
 header {

@@ -49,6 +49,10 @@ body {
   line-height: 26px;
 }
 
+body * {
+  outline: 2px solid red;
+}
+
 header {
   position: relative;
   display: -webkit-box;
