@@ -282,6 +282,10 @@ header {
           margin: 0 auto -20px auto;
           align-items: center;
           justify-content: center;
+
+          .social_link {
+            margin-right: 10px;
+          }
         }
 
         .typing {
@@ -377,6 +381,17 @@ header {
           h2 {
             margin-bottom: 25px;
           }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .services {
+    .services_body {
+      .container {
+        .services_cards {
+          width: 90%;
         }
       }
     }
@@ -732,7 +747,7 @@ header {
           place-items: center;
           border-bottom-left-radius: 50px;
           border-bottom-right-radius: 50px;
-          width: 50%;
+          width: 60%;
           height: 30px;
           background-color: $red;
           position: absolute;
@@ -809,7 +824,7 @@ header {
       margin-top: 70px;
 
       .pricing_cards {
-        width: 80%;
+        width: 90%;
         flex-direction: column;
 
         .pricing_card {

@@ -346,6 +346,9 @@ header ul li a:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .banner .container .intro .social_links .social_link {
+    margin-right: 10px;
+  }
   .banner .container .intro .typing {
     font-size: 50px;
     width: 100%;
@@ -448,6 +451,12 @@ header ul li a:hover {
 
 .services .services_body .container .services_cards .services_card h2 {
   margin-bottom: 25px;
+}
+
+@media (max-width: 800px) {
+  .services .services_body .container .services_cards {
+    width: 90%;
+  }
 }
 
 .about {
@@ -821,7 +830,7 @@ header ul li a:hover {
   place-items: center;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  width: 50%;
+  width: 60%;
   height: 30px;
   background-color: #dc3545;
   position: absolute;
@@ -910,7 +919,7 @@ header ul li a:hover {
     margin-top: 70px;
   }
   .pricing .pricing_body .pricing_cards {
-    width: 80%;
+    width: 90%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
