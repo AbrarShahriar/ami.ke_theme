@@ -2,7 +2,7 @@
 a {
   text-decoration: none;
   color: white;
-  display: inline-block;
+  display: inline;
   -webkit-transition: all 100ms;
   transition: all 100ms;
 }
@@ -43,6 +43,7 @@ a {
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -203,6 +204,27 @@ header ul li a:hover {
   transition: all 0.8s ease-in-out;
 }
 
+.banner_small {
+  height: 300px;
+  background-color: #1f2235;
+  padding-top: 100px;
+}
+
+.banner_small h1 {
+  text-align: center;
+  font-size: 52px;
+}
+
+.banner_small .tag {
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: #25283d;
+  padding: 5px 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .banner .container {
   margin-top: 100px;
   width: 80%;
@@ -259,7 +281,6 @@ header ul li a:hover {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: monospace;
   margin-top: 50px;
   font-size: 62px;
   font-weight: bold;
@@ -274,6 +295,8 @@ header ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 60px;
+  font-weight: normal;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -287,7 +310,9 @@ header ul li a:hover {
 }
 
 .banner .container .intro p {
-  font-size: 1.7em;
+  font-size: 1.5em;
+  opacity: 0.8;
+  font-weight: 300;
   margin-bottom: 50px;
   line-height: 40px;
 }
@@ -355,7 +380,7 @@ header ul li a:hover {
     margin-right: 10px;
   }
   .banner .container .intro .typing {
-    font-size: 50px;
+    font-size: 40px;
     width: 100%;
     line-height: 1em;
     white-space: normal;
@@ -422,8 +447,7 @@ header ul li a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 20px;
-  max-width: 350px;
-  height: 300px;
+  width: 500px;
   -webkit-transition: background-color 500ms ease;
   transition: background-color 500ms ease;
 }
@@ -766,6 +790,24 @@ header ul li a:hover {
   border-radius: 6px;
 }
 
+.portfolio .btn_seemore {
+  cursor: pointer;
+  display: block;
+  border: 2px solid #dc3545;
+  border-radius: 50px;
+  padding: 10px 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all 100ms ease;
+  transition: all 100ms ease;
+  margin: -20px auto 100px auto;
+}
+
+.portfolio .btn_seemore:hover {
+  background-color: #dc3545;
+}
+
 @media (max-width: 800px) {
   .portfolio .portfolio_header_options {
     width: 90%;
@@ -1017,6 +1059,37 @@ header ul li a:hover {
           flex: 1;
   -webkit-transition: 200ms all ease-in;
   transition: 200ms all ease-in;
+  max-width: 500px;
+  position: relative;
+}
+
+.reviews .container .reviews_body .slick-arrow {
+  z-index: 1;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #ebebeb;
+  border-radius: 50%;
+  background: RGB(35, 38, 58);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  cursor: pointer;
+  margin: 0 -20px;
+}
+
+.reviews .container .reviews_body .slick-arrow:hover {
+  border-color: #dc3545;
+}
+
+.reviews .container .reviews_body .slick-prev::before {
+  content: "\f053";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+.reviews .container .reviews_body .slick-next::before {
+  content: "\f054";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
 }
 
 .reviews .container .reviews_body .reviews_container .review_text_container {
@@ -1138,6 +1211,12 @@ header ul li a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .reviews .container .reviews_body {
+    max-width: 100%;
+  }
+  .reviews .container .reviews_body .slick-arrow {
+    display: none;
   }
   .reviews .container .reviews_body .reviews_container {
     margin: 0 20px;
@@ -1421,6 +1500,10 @@ header ul li a:hover {
   .contact .contact_form .name_email > *:first-child {
     margin-bottom: 30px;
   }
+}
+
+.footer_dark {
+  background-color: #1f2235;
 }
 
 footer .container {

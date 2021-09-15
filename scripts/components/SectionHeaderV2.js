@@ -12,7 +12,7 @@ export default function SectionHeaderV2({
         <p class="section_info_v2">
         ${desc}
         </p>
-        <div class="btn_hireme">${btnName}</div>
+        <!-- <div class="btn_hireme">${btnName}</div> -->
     </div>
     `;
 }

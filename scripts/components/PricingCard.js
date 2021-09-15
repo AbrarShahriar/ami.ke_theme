@@ -15,7 +15,7 @@ export default function PricingCard({ title, price, services, recommended }) {
               })
               .join(" ")}
         </div>
-        <div class="btn_purchase">Purchase</div>
+        <a href="#contact" class="btn_purchase">Purchase</a>
     </div>
     `;
 }

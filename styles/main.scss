@@ -14,6 +14,7 @@
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -161,6 +162,25 @@ header {
   transition: all 0.8s ease-in-out;
 }
 
+.banner_small {
+  height: 300px;
+  background-color: $header-color;
+  padding-top: 100px;
+
+  h1 {
+    text-align: center;
+    font-size: 52px;
+  }
+
+  .tag {
+    margin: 0 auto;
+    margin-top: 40px;
+    background-color: $body-color;
+    padding: 5px 30px;
+    width: fit-content;
+  }
+}
+
 .banner {
   .container {
     margin-top: 100px;
@@ -202,19 +222,19 @@ header {
         position: relative;
         margin-bottom: 50px;
         width: fit-content;
-        font-family: monospace;
         margin-top: 50px;
         font-size: 62px;
         font-weight: bold;
         border-right: 5px solid transparent;
         white-space: nowrap;
-        // outline: 2px solid green;
 
         &::after {
           content: "|";
           position: absolute;
           top: -80%;
           display: flex;
+          font-size: 60px;
+          font-weight: normal;
           align-items: center;
           right: 0;
           width: 100%;
@@ -227,7 +247,9 @@ header {
       }
 
       p {
-        font-size: 1.7em;
+        font-size: 1.5em;
+        opacity: 0.8;
+        font-weight: 300;
         margin-bottom: 50px;
         line-height: 40px;
       }
@@ -290,7 +312,7 @@ header {
         }
 
         .typing {
-          font-size: 50px;
+          font-size: 40px;
           width: 100%;
           line-height: 1em;
           white-space: normal;
@@ -335,9 +357,8 @@ header {
 
   .services_body {
     .container {
-      // outline: 2px solid green;
-
       .services_cards {
+        // outline: 2px solid green;
         width: 80%;
         margin: 0 auto;
         display: flex;
@@ -353,10 +374,8 @@ header {
           padding: 50px 35px;
           transition: 0.5s;
           border-radius: 20px;
-          max-width: 350px;
-          height: 300px;
+          width: 500px;
           transition: background-color 500ms ease;
-          // margin: 10px;
 
           &:hover {
             background-color: $red;
@@ -688,6 +707,21 @@ header {
       border-radius: 6px;
     }
   }
+
+  .btn_seemore {
+    cursor: pointer;
+    display: block;
+    border: 2px solid $red;
+    border-radius: 50px;
+    padding: 10px 40px;
+    width: fit-content;
+    transition: all 100ms ease;
+    margin: -20px auto 100px auto;
+
+    &:hover {
+      background-color: $red;
+    }
+  }
 }
 @media (max-width: 800px) {
   .portfolio {
@@ -895,6 +929,39 @@ header {
       margin-top: 100px;
       flex: 1;
       transition: 200ms all ease-in;
+      max-width: 500px;
+      position: relative;
+
+      .slick-arrow {
+        z-index: 1;
+        height: 40px;
+        width: 40px;
+        border: 2px solid rgb(235, 235, 235);
+        border-radius: 50%;
+        background: RGB(35, 38, 58);
+        transition: 0.3s linear;
+        cursor: pointer;
+
+        margin: 0 -20px;
+
+        &:hover {
+          border-color: $red;
+        }
+      }
+
+      .slick-prev {
+        &::before {
+          content: "\f053";
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+        }
+      }
+
+      .slick-next::before {
+        content: "\f054";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+      }
 
       .reviews_container {
         .review_text_container {
@@ -999,6 +1066,10 @@ header {
       flex-direction: column;
 
       .reviews_body {
+        max-width: 100%;
+        .slick-arrow {
+          display: none;
+        }
         .reviews_container {
           margin: 0 20px;
           .review_text_container {
@@ -1243,6 +1314,10 @@ header {
       }
     }
   }
+}
+
+.footer_dark {
+  background-color: $header-color;
 }
 
 footer {

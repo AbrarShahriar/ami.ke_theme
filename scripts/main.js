@@ -5,6 +5,7 @@ import {
   blogData,
   portfolioCardData,
   pricingCardsData,
+  reviewsData,
   servicesCardData,
   skillsData,
   socialLinksData,
@@ -19,6 +20,11 @@ import PricingCard from "./components/PricingCard.js";
 import TotalWork from "./components/TotalWork.js";
 import ReviewCard from "./components/ReviewCard.js";
 import BlogCard from "./components/BlogCard.js";
+import { ScrollObserver } from "../libs/scrollObserver.js";
+
+const counterUp = window.counterUp.default || null;
+
+// window.addEventListener("hashchange", router);
 
 //-----------HEADER MENU--------------//
 
@@ -89,7 +95,7 @@ services.insertAdjacentHTML(
   SectionHeader({
     tag: "Services",
     title: "My Services",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sit dolore ",
+    desc: "We help forward-looking business owners reinvent their brand visually. Our partners enjoy high quality designs, fully customized to fit their brand vision",
   })
 );
 
@@ -100,7 +106,7 @@ about.insertAdjacentHTML(
   SectionHeader({
     tag: "",
     title: "About Me",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.",
+    desc: "",
   })
 );
 
@@ -111,7 +117,7 @@ skills.insertAdjacentHTML(
   SectionHeaderV2({
     tag: "I'M EXPERT ON",
     title: "Let's Work Together",
-    desc: "Phasellus accumsan scelerisque dolor, quis mattis justo bibendumnon. Nulla sollicitudin turpis in enim elementum varius. Vestibulumante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae",
+    desc: "Ready to discuss your next design project? <br> Let's Talk! <br><br> We will get back to you as soon as possible. <br> Looking forward to creating something awesome for you!",
     btnName: "Learn More",
   })
 );
@@ -182,7 +188,7 @@ pricing.insertAdjacentHTML(
   SectionHeader({
     tag: "CHOOSE A PLAN",
     title: "Pricing Plan",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.",
+    desc: "",
   })
 );
 
@@ -199,9 +205,27 @@ pricingCardsData.map(({ title, price, services, recommended }) => {
 
 //-----------TOTAL WORKS-------------//
 const totalWorksContainer = selector(".total_works > .container");
-totalWorksData.map(({ title, amount, Icon }) => {
-  totalWorksContainer.innerHTML += TotalWork({ title, Icon, amount });
+totalWorksData.map(({ title, amount, Icon }, index) => {
+  totalWorksContainer.innerHTML += TotalWork({ title, Icon, amount, index });
 });
+window.onload = function () {
+  const scrollObserver = new ScrollObserver({
+    root: document.getElementById("content"),
+    rootMargin: "0px",
+    threshold: 0,
+  });
+  scrollObserver.observe({
+    elements: document.querySelectorAll("#countUp"),
+    onElVisible: (observedEl) => {
+      const els = selectorAll("#countUp");
+      els.forEach((el) =>
+        counterUp(el, {
+          duration: 2000,
+        })
+      );
+    },
+  });
+};
 
 //-----------REVIEWS HEADER--------------//
 const reviewsContainer = selector(".reviews > .container");
@@ -211,7 +235,7 @@ reviewsContainer.insertAdjacentHTML(
   SectionHeaderV2({
     tag: "Our Testimonials",
     title: "Happy Clients Says",
-    desc: "Phasellus accumsan scelerisque dolor, quis mattis justo  varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae <br><br> enim elementum varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
+    desc: "",
     btnName: "Learn More",
     aos: "fade-right",
   })
@@ -219,33 +243,13 @@ reviewsContainer.insertAdjacentHTML(
 
 //-----------REVIEWS SWAP--------------//
 const reviewsBody = selector(".reviews_body");
-reviewsBody.innerHTML = ReviewCard(initState.reviews[0]);
-
-const reviewButtonGroup = selectorAll(".action");
-const reviewsBody_p = selector(".review_text_container > p");
-const reviewsBody_username = selector(".review_user_actions p");
-const reviewsBody_avatarImg = selector(".avatar img");
-console.log(reviewsBody_avatarImg);
-
-const reviewsBody_profession = selector(".info .profession");
-
-let c = 1;
-reviewButtonGroup.forEach((btn) => {
-  btn.addEventListener("click", (ev) => {
-    c = c * -1;
-    if (c === 1) {
-      let i = 0;
-      reviewsBody_p.innerText = initState.reviews[i].reviewBody;
-      reviewsBody_username.innerText = initState.reviews[i].username;
-      reviewsBody_avatarImg.src = initState.reviews[i].userImg;
-      reviewsBody_profession.innerText = initState.reviews[i].userProfession;
-    } else {
-      let i = 1;
-      reviewsBody_p.innerText = initState.reviews[i].reviewBody;
-      reviewsBody_username.innerText = initState.reviews[i].username;
-      reviewsBody_avatarImg.src = initState.reviews[i].userImg;
-      reviewsBody_profession.innerText = initState.reviews[i].userProfession;
-    }
+reviewsData.map(({ userImg, userProfession, username, reviewBody, rating }) => {
+  reviewsBody.innerHTML += ReviewCard({
+    userImg,
+    userProfession,
+    username,
+    reviewBody,
+    rating,
   });
 });
 
@@ -256,7 +260,7 @@ blogs.insertAdjacentHTML(
   SectionHeader({
     tag: "Latest Post",
     title: "Latest blog",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.",
+    desc: "",
   })
 );
 
@@ -272,8 +276,8 @@ const contact = selector(".contact");
 contact.insertAdjacentHTML(
   "afterbegin",
   SectionHeader({
-    tag: "Have Any Query?",
+    tag: "Have Any Project?",
     title: "Contact Me",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.",
+    desc: "",
   })
 );

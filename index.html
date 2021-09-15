@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ami Ke</title>
     <link rel="stylesheet" href="styles/main.css" />
+
+    <link rel="stylesheet" href="libs/slick-theme.css" />
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <script src="https://use.fontawesome.com/0c543e37a3.js"></script>
-
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
   </head>
   <body>
     <!-- --------- HEADER ---------- -->
@@ -27,22 +27,22 @@
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/">Services</a>
+            <a href="#services">Services</a>
           </li>
           <li>
-            <a href="/">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="/">Skills</a>
+            <a href="#skills">Skills</a>
           </li>
           <li>
-            <a href="/">Portfolio</a>
+            <a href="/portfolio.html">Portfolio</a>
           </li>
           <li>
-            <a href="/">Blog</a>
+            <a href="#blog">Blog</a>
           </li>
           <li>
-            <a href="/">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -58,16 +58,12 @@
       <div class="container">
         <div class="intro">
           <div class="social_links"></div>
-          <h1 class="typing">I am Jonathan Doe</h1>
+          <h1 class="typing">I am Siam Khondoker</h1>
           <p>
-            i'm Jonathan, professional web developer with long time experience
-            in this field
+            i'm a branding and visual designer with long time experience in this field.
           </p>
           <div class="actions">
-            <div class="btn_myportfolio">My Portfolio</div>
-            <div class="btn_play">
-              <i class="fa fa-play" aria-hidden="true"></i>
-            </div>
+            <a href="#portfolio" class="btn_myportfolio">My Portfolio</a>
           </div>
         </div>
         <img
@@ -87,7 +83,7 @@
     </div>
 
     <!-- --------- SERVICES ---------- -->
-    <div class="services">
+    <div id="services" class="services">
       <!-- header here -->
       <div class="services_body">
         <div  class="container">
@@ -97,7 +93,7 @@
     </div>
 
     <!-- --------- ABOUT---------- -->
-    <div class="about">
+    <div id="about" class="about">
       <!-- header here -->
       <div class="about_body">
         <div class="container">
@@ -110,36 +106,33 @@
           />
           <div class="about_info_body" data-aos="fade-left">
             <div class="about_info_title">
-              <h1>Hi There</h1>
+              <h1>Hi.</h1>
               <p>
-                In id nulla magna. Nullam posuere fermentum mattis. Nunc id dui
-                at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id
-                efficitur sagittis, urna est ultricies eros, ac porta sem turpis
+                I'm a Freelance Logo & Branding Designer expertise of 5+ years in the field of Creative & Art.
                 <br />
                 <br />
-                nunc id efficitur sagittis, urna est ultricies eros, ac porta
-                sem turpis porta sem turpis quis leo. Nulla in feugiat elit
+                Since 2015 I've worked for brands like Electron Engineering , Techpath, NOORCA, Ummah's Fashion, Envato, Uplabs, Freepik etc.
               </p>
             </div>
             <div class="about_infos">
               <div class="about_info">
                 <div class="info">
                   <p>Name:</p>
-                  <span>Jonathan Doe</span>
+                  <span>Siam Khondoker</span>
                 </div>
                 <div class="info">
                   <p>Email:</p>
-                  <span>example@domain.com</span>
+                  <span>siamkhondoker.info@gmail.com</span>
                 </div>
               </div>
               <div class="about_info">
                 <div class="info">
                   <p>Phone:</p>
-                  <span>+1 023 454 345</span>
+                  <span>+880 1835310183</span>
                 </div>
                 <div class="info">
                   <p>LinkedIn:</p>
-                  <span>Jonathan_123</span>
+                  <span>Siam_Khondoker</span>
                 </div>
               </div>
             </div>
@@ -149,7 +142,7 @@
     </div>
 
     <!-- --------- SKILLS ---------- -->
-    <div class="skills">
+    <div id="skills" class="skills">
       <div class="container">
         <!-- header v2 here -->
         <div class="skills_body">
@@ -159,7 +152,7 @@
     </div>
 
     <!-- --------- PORTFOLIO ---------- -->
-    <div data-aos="fade-up" class="portfolio">
+    <div id="portfolio" data-aos="fade-up" class="portfolio">
       <!-- header here -->
       <div class="portfolio_header_options">
         <span data-filter=".all_works" class="option option_active"
@@ -175,6 +168,9 @@
           <div class="grid-sizer"></div>
         </div>
       </div>
+      <a href="portfolio.html" class="btn_seemore">
+        See More
+      </a>
     </div>
 
     <!-- --------- PRICING ---------- -->
@@ -194,6 +190,7 @@
     <div class="reviews">
       <div class="container">
         <!-- header v2 here -->
+        <!-- <div data-aos="fade-left" class="reviews_body"></div> -->
         <div class="reviews_body"></div>
       </div>
     </div>
@@ -230,7 +227,7 @@
     </div>
 
     <!-- --------- BLOGS ---------- -->
-    <div class="blogs">
+    <div id="blog" class="blogs">
       <!-- header here -->
       <div class="blogs_body">
         <div class="blog_cards"></div>
@@ -238,7 +235,7 @@
     </div>
 
     <!-- --------- CONTACT ---------- -->
-    <div class="contact">
+    <div id="contact" class="contact">
       <!-- header here -->
       <div class="basic_contact_info">
 
@@ -295,13 +292,13 @@
             <i class="fa fa-facebook"></i>
           </div>
           <div class="social_link">
-            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
           </div>
           <div class="social_link">
             <i class="fa fa-instagram"></i>
           </div>
           <div class="social_link">
-            <i class="fa fa-pinterest"></i>
+            <i class="fa fa-dribbble"></i>
           </div>
         </div>
       </div>
@@ -310,11 +307,34 @@
 
     <script type="module" src="scripts/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script src="https://use.fontawesome.com/0c543e37a3.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script>
+
       AOS.init({
         once: true,
         duration: 1500
       });
+
+      $(document).ready(function(){
+        $('.reviews_body').slick({
+          autoplay: true,
+          arrows: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear',
+          mobileFirst: true
+        });
+      });
+
     </script>
   </body>
 </html>

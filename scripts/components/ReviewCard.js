@@ -6,7 +6,7 @@ export default function ReviewCard({
   userProfession,
 }) {
   return `
-    <div data-aos="fade-left" class="reviews_container">
+    <div" class="reviews_container">
         <div class="review_text_container">
             <p>
                 ${reviewBody}
@@ -29,14 +29,6 @@ export default function ReviewCard({
                 <div class="info">
                     <p>${username}</p>
                     <span class="profession">${userProfession}</span>
-                </div>
-            </div>
-            <div class="actions">
-                <div class="action">
-                    <i class="fa fa-chevron-left"></i>
-                </div>
-                <div class="action">
-                    <i class="fa fa-chevron-right"></i>
                 </div>
             </div>
         </div>
