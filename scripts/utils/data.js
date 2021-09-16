@@ -125,6 +125,7 @@ export const pricingCardsData = [
       "High Resolution",
       "3D Mockup",
       "Vector File",
+      "0 Print Item",
     ],
     recommended: false,
   },

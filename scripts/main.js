@@ -20,11 +20,48 @@ import PricingCard from "./components/PricingCard.js";
 import TotalWork from "./components/TotalWork.js";
 import ReviewCard from "./components/ReviewCard.js";
 import BlogCard from "./components/BlogCard.js";
-import { ScrollObserver } from "../libs/scrollObserver.js";
+import { ScrollObserver } from "./utils/scrollObserver.js";
 
-const counterUp = window.counterUp.default || null;
+import AOS from "aos";
+import $ from "jquery";
+import counterUp from "counterup2";
+import Isotope from "isotope-layout";
+import imagesLoaded from "imagesloaded";
+import slick from "slick-carousel";
 
-// window.addEventListener("hashchange", router);
+window.onload = function () {
+  AOS.init({
+    once: true,
+    duration: 1500,
+  });
+
+  $(".reviews_body").slick({
+    autoplay: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: "linear",
+    mobileFirst: true,
+  });
+
+  const scrollObserver = new ScrollObserver({
+    root: document.getElementById("content"),
+    rootMargin: "0px",
+    threshold: 0,
+  });
+  scrollObserver.observe({
+    elements: document.querySelectorAll("#countUp"),
+    onElVisible: (observedEl) => {
+      const els = selectorAll("#countUp");
+      els.forEach((el) =>
+        counterUp(el, {
+          duration: 2000,
+        })
+      );
+    },
+  });
+};
 
 //-----------HEADER MENU--------------//
 
@@ -208,24 +245,6 @@ const totalWorksContainer = selector(".total_works > .container");
 totalWorksData.map(({ title, amount, Icon }, index) => {
   totalWorksContainer.innerHTML += TotalWork({ title, Icon, amount, index });
 });
-window.onload = function () {
-  const scrollObserver = new ScrollObserver({
-    root: document.getElementById("content"),
-    rootMargin: "0px",
-    threshold: 0,
-  });
-  scrollObserver.observe({
-    elements: document.querySelectorAll("#countUp"),
-    onElVisible: (observedEl) => {
-      const els = selectorAll("#countUp");
-      els.forEach((el) =>
-        counterUp(el, {
-          duration: 2000,
-        })
-      );
-    },
-  });
-};
 
 //-----------REVIEWS HEADER--------------//
 const reviewsContainer = selector(".reviews > .container");
