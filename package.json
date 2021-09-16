@@ -1,0 +1,33 @@
+{
+  "name": "siam_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbrarShahriar/ami.ke_theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbrarShahriar/ami.ke_theme/issues"
+  },
+  "homepage": "https://github.com/AbrarShahriar/ami.ke_theme#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.41.0"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "counterup2": "^2.0.2",
+    "imagesloaded": "^4.1.4",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.6.0",
+    "slick-carousel": "^1.8.1"
+  }
+}
