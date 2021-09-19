@@ -1,7 +1,7 @@
-export default function SocialLink({ link, Icon }) {
+export default function SocialLink({ link, Icon, src }) {
   return `
     <div onClick='goToLink("${link}")' class="social_link">
-        <i class="fa ${Icon}"></i>
+        ${Icon ? `<i class="fa ${Icon}"></i>` : `<img src="${src}" />`}
     </div>
     `;
 }

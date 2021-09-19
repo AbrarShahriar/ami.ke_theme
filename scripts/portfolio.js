@@ -75,8 +75,8 @@ function removeActiveClassFromAllExcept(index) {
 //------PORTFOLIO BODY MASONARY-------//
 var grid = selector(".grid");
 
-portfolioCardData.map(({ imgSrc, title, tag }) => {
-  grid.innerHTML += PortfolioCard({ imgSrc, title, tag });
+portfolioCardData.map(({ imgSrc, title, tag }, i) => {
+  grid.innerHTML += PortfolioCard({ imgSrc, title, tag, id: i });
 });
 
 var iso = new Isotope(grid, {

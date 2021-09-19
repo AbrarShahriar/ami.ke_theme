@@ -61,6 +61,13 @@ window.onload = function () {
       );
     },
   });
+
+  //-----------SOCIAL lINKS--------------//
+  const socialLinks = selector(".social_links");
+
+  socialLinksData.map(({ link, Icon, src }) => {
+    socialLinks.innerHTML += SocialLink({ link, Icon, src });
+  });
 };
 
 //-----------HEADER MENU--------------//
@@ -110,13 +117,6 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-//-----------SOCIAL lINKS--------------//
-const socialLinks = selector(".social_links");
-
-socialLinksData.map(({ link, Icon }) => {
-  socialLinks.innerHTML += SocialLink({ link, Icon });
-});
 
 //-----------SERVICES CARD--------------//
 const servicesContainer = selector(".services_cards");
@@ -204,8 +204,8 @@ function removeActiveClassFromAllExcept(index) {
 //------PORTFOLIO BODY MASONARY-------//
 var grid = selector(".grid");
 
-portfolioCardData.map(({ imgSrc, title, tag }) => {
-  grid.innerHTML += PortfolioCard({ imgSrc, title, tag });
+portfolioCardData.map(({ imgSrc, title, tag }, i) => {
+  grid.innerHTML += PortfolioCard({ imgSrc, title, tag, id: i });
 });
 
 var iso = new Isotope(grid, {

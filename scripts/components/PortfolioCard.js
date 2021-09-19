@@ -1,7 +1,7 @@
-export default function PortfolioCard({ imgSrc, tag, title, link = "a" }) {
+export default function PortfolioCard({ imgSrc, tag, title, id = 0 }) {
   return `
     <div class="grid-item all_works ${tag[1]}">
-      <a href="./work.html">
+      <a href="./work.html?id=${id}">
         <img
           src="${imgSrc}"
           alt="${title}"
