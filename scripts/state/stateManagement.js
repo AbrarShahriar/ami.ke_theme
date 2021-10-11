@@ -3,8 +3,6 @@ export let initState = {
 };
 
 export const reducer = (state = initState, action) => {
-  console.log(action);
-
   switch (action.type) {
     case "UPDATE_PORTFOLIO_STATE":
       return {
